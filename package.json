@@ -1,0 +1,40 @@
+{
+  "name": "salesforce-queries",
+  "version": "0.0.3",
+  "description": "A JavaScript SOQL/SOSL Query Builder for the Force.com Platform",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "repository": "jpmonette/salesforce-queries.git",
+  "homepage": "http://github.com/jpmonette/salesforce-queries",
+  "bugs": "https://github.com/jpmonette/salesforce-queries/issues",
+  "author": "Jean-Philippe Monette <contact@jpmonette.net>",
+  "license": "MIT",
+  "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "build": "rm -rf build && tsc",
+    "prepare": "yarn build",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "coveralls": "^3.0.11",
+    "jest": "^25.3.0",
+    "jsdom": "^16.2.2",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
